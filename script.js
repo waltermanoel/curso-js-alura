@@ -30,12 +30,22 @@ console.log(area)*/
 const forma = "quadrado";
 const altura = 5;
 const comprimento = 7;
-let area;
+//let area;
 
-if (forma === "quadrado") {
+/*if (forma === "quadrado") {
     area = altura * comprimento;
 } else {
     area = (altura * comprimento) / 2;
+}*/
+
+//console.log(area);
+
+function area(forma, altura, largura) {
+    if(forma === "quadrado") {
+        return altura * largura;
+    } else if(forma === "triangulo"){
+        return (altura * largura) / 2;
+    }
 }
 
-console.log(area);
+console.log(area("triangulo", 3, 10));

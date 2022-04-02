@@ -22,3 +22,9 @@ let string = "Alura";
 
 console.log(typeof minhaVar);
 console.log(typeof varNull);
+
+function tipoVar(dado) {
+    return typeof dado;
+}
+
+console.log(tipoVar(minhaVar))
