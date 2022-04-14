@@ -15,11 +15,12 @@ function clientePoupanca(nome, cpf, email, saldo, saldoPoup) {
 
 const walter = new clientePoupanca("Walter", "874784848", "walter@gmail.com", 200, 200);
 
-console.log(walter);
+
 
 clientePoupanca.prototype.depositarPoup = function(valor){
     this.saldoPoup += valor;
 };
+console.log(walter);
 
 walter.depositarPoup(20);
 
