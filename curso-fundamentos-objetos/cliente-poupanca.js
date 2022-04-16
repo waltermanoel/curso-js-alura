@@ -1,4 +1,4 @@
-function cliente(nome, cpf, email, saldo ) {
+function Cliente(nome, cpf, email, saldo ) {
     this.nome = nome;
     this.cpf = cpf;
     this.email = email;
@@ -8,16 +8,20 @@ function cliente(nome, cpf, email, saldo ) {
     };
 };
 
-function clientePoupanca(nome, cpf, email, saldo, saldoPoup) {
-    cliente.call(this, nome, cpf, email, saldo);
+const raiza = new Cliente("Raiza", "649494984", "raiza@gmail.com", 100)
+
+console.log(raiza)
+
+function ClientePoupanca(nome, cpf, email, saldo, saldoPoup) {
+    Cliente.call(this, nome, cpf, email, saldo);
     this.saldoPoup = saldoPoup;
 };
 
-const walter = new clientePoupanca("Walter", "874784848", "walter@gmail.com", 200, 200);
+const walter = new ClientePoupanca("Walter", "874784848", "walter@gmail.com", 200, 200);
 
 
 
-clientePoupanca.prototype.depositarPoup = function(valor){
+ClientePoupanca.prototype.depositarPoup = function(valor){
     this.saldoPoup += valor;
 };
 console.log(walter);
