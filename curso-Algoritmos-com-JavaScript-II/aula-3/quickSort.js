@@ -21,6 +21,7 @@ function particiona(array, esquerda, direita) {
     console.log("array", array);
     console.log("esquerda, direita", esquerda, direita);
     let pivo = array[Math.floor((esquerda + direita) / 2)];
+    console.log(pivo)
     let altualEsquerda = esquerda;
     let altualDireita = direita;
 
@@ -42,5 +43,5 @@ function particiona(array, esquerda, direita) {
 
     return altualEsquerda;
 };
- 
+
 console.log(quickSort(listaLivros, 0, listaLivros.length - 1));
