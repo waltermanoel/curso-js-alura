@@ -11,7 +11,7 @@ function extraiLinks(texto) {
         arrayRes.push({ [temp[1]]: temp[2] });
     };
 
-    return arrayRes;
+    return arrayRes.length === 0 ? "não há links" : arrayRes;
 };
 
 function tratarErro(erro) {
@@ -22,10 +22,11 @@ async function pegaArquivo(caminhoDoArquivo) {
     const encoding = "UTF-8";
     try {
         const texto = await fs.promises.readFile(caminhoDoArquivo, encoding);
-        console.log(extraiLinks(texto));
+        return extraiLinks(texto);
     } catch(erro) {
         tratarErro(erro);
     };
 };
 
-pegaArquivo("./arquivos/texto1.md");
+
+module.exports = pegaArquivo;
