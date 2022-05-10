@@ -12,4 +12,10 @@ describe("pegaArquivo::", () => {
         const resultado = await pegaArquivo("D:/Acesso rápido/Documentos/Estudos/curso-js-alura/curso-criando-primeira-biblioteca/test/arquivos/texto1.md");
         expect(resultado).toEqual(arrayResult);
     });
+
+    it('deve retornar menssagem "não há links"', async () => {
+        const resultado = await pegaArquivo("D:/Acesso rápido/Documentos/Estudos/curso-js-alura/curso-criando-primeira-biblioteca/test/arquivos/texto2.md");
+        expect(resultado).toBe("não há links");
+    });
+
 });
