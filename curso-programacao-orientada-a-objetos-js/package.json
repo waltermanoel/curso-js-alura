@@ -2,6 +2,7 @@
   "name": "curso-programacao-orientada-a-objetos",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "User.js",
   "directories": {
     "doc": "docs"
