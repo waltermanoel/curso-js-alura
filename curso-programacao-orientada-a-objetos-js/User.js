@@ -1,4 +1,4 @@
-class User {
+export default class User {
     constructor(nome, email, nasc, role, ativo=true) {
         this.nome = nome;
         this.email = email;
@@ -12,9 +12,4 @@ class User {
     };
 };
 
-const novoUser = new User("Pedro", "pedro@gmail.com", "20/02/2006");
 
-console.log(novoUser);
-console.log(novoUser.exibirInfos());
-
-console.log(User.prototype.isPrototypeOf(novoUser));
