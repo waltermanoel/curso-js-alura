@@ -7,4 +7,6 @@ import Docente from "./Docente.js";
 
 const novoAdmin = new Admin("Guanabara", "guan@gmail.com", "06/07/1980");
 
-console.log(novoAdmin.nome, novoAdmin.email, novoAdmin.nasc, novoAdmin.role, novoAdmin.ativo);
+console.log(novoAdmin.nome);
+novoAdmin.nome = "Walter";
+console.log(novoAdmin.nome);

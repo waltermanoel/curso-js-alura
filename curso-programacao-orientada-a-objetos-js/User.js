@@ -32,6 +32,15 @@ export default class User {
         return this.#ativo;
     };
 
+    set nome(novoNome) {
+        if (novoNome === "") {
+            throw new Error("Formato não válido");
+        } else {
+            this.#nome = novoNome;
+            console.log("O nome foi alterado para " + novoNome);
+        };
+    };
+
     exibirInfos() {
         return `${this.nome}, ${this.email}`;
     };
