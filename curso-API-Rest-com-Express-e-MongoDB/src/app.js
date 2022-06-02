@@ -26,11 +26,6 @@ app.get("/livros/:id", (req, res) => {
     res.status(200).json(livro);
 });
 
-app.post("/livros", (req, res) => {
-    livros.push(req.body);
-    res.status(201).send(`Livro ${req.body.titulo} foi criado com sucesso`)
-});
-
 app.put("/livros/:id", (req, res) => {
     const index = buscaLivro(req.params.id);
     livros[index].titulo = req.body.titulo;
